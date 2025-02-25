@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datas</title>
+</head>
+<body> 
+    <div>
+        <h1>Faltam <span style="color: red;"></span> para o grande dia!</h1>
+    </div>
+
+    <script>
+        function calcularTempoRestante() {
+            // Definindo data futura e data atual
+            const dataFutura = new Date('2025-04-09T00:59:59').getTime();
+            const dataAtual = new Date().getTime();
+
+            // Calculando quanto tempo falta
+            let tempoRestante = Math.floor((dataFutura - dataAtual) / 1000);
+
+            // Quando o contador chegar a 0
+            if(tempoRestante <= 0) {
+                clearInterval(tempoRestante);
+                document.getElementById('h1').innerText = 'Chegou o grande Dia. Feliz Aniversário!!!';
+                return;
+            };
+
+            // Dividindo o tempo restante em dias, horas, minutos e segundos
+            let dias = Math.floor(tempoRestante / (60 * 60 * 24));
+            let horas = Math.floor(tempoRestante % (60 * 60 * 24) / (60 * 60));
+            let minutos = Math.floor(tempoRestante % (60 * 60) / 60);
+            let segundos = tempoRestante % 60;
+
+            // Ajustando para o formato correto D HH:MM:SS
+            horas = horas < 10 ? '0' + horas : horas;
+            minutos = minutos < 10 ? '0' + minutos : minutos;
+            segundos = segundos < 10 ? '0' + segundos : segundos;
+
+            // Exibindo o display na tag span no HTML
+            let display = document.querySelector('span').innerText = ` ${dias} dias ${horas}:${minutos}:${segundos}s `;
+            if(dias < 1) {
+                document.getElementById('span').innerText = ` ${horas}:${minutos}:${segundos}s `
+            }
+            
+        };
+
+        function atualizarTemporizador() {
+            tempoRestante = setInterval(calcularTempoRestante, 1000);
+            calcularTempoRestante();
+        };
+
+        atualizarTemporizador();
+
+    </script>
+</body>
+</html>

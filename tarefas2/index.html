@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <div id="main">
+        <div id="terefas">
+            <fieldset>
+                <label for="">Adicionar Nova Tarefa: </label>
+                <input
+                name="novaTarefa" 
+                type="text"
+                placeholder="Digite a nova tarefa"
+                >
+                <button onclick="addTask()">Adicionar</button>
+            </fieldset>
+        </div>
+        <div id="list-field">
+            <h1>LISTA DE TAREFAS</h1>
+            <div class="check-list">
+                <ul id="lista"></ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

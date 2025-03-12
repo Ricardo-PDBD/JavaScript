@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar API</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <div id="main">
+        <h1>DADOS DE USUÁRIOS DO GITHUB</h1>
+        <fieldset>
+            <label> Quem você procura?</label>
+            <input 
+            type="text" 
+            id="procura"
+            placeholder="Nome de usuário"
+            >
+            <button onclick="carregaDev()" id="bttn-procura">Procurar</button>
+        </fieldset>
+        <div id="dados">
+
+        </div>
+    </div>
+</body>
+</html>

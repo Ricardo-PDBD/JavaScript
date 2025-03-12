@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+#main {
+    text-align: center;
+    margin-top: 2rem;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    font-size: 4rem;
+    color: #06138d;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.6rem;
+}
+
+label {
+    font-size: 3rem;
+}
+
+::placeholder {
+    font-size: 1.6rem;
+}
+
+#procura {
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+}
+
+#bttn-procura {
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    background-color: #06148db9;
+    color: #fff;
+}
+
+#bttn-procura:hover {
+    background-color: #06138d;
+}
+
+strong {
+    font-size: 1.6rem;
+}
+
+span, p {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #c91610;
+}
+
+.msg {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+
+    width: 45rem;
+    margin-left: 40rem;
+}
